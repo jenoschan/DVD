@@ -7,7 +7,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,15 +20,15 @@ import javafx.util.Duration;
 import java.util.Random;
 
 public class Main extends Application {
-    private static int w = 600;
-    private static int h = 600;
+    private static final int w = 600;
+    private static final int h = 600;
     private final double speed = 2;
 
     ImageView image;
     ColorAdjust color = new ColorAdjust();
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Pane canvas = new Pane();
 
         primaryStage.setTitle("DVD");
